@@ -1,0 +1,23 @@
+import MobileNav from '@/components/shared/MobileNav';
+import SideBar from '@/components/shared/Sidebar';
+import React from 'react'
+
+const Layout = ({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) => {
+  return (
+    <div>
+      <main className='root'>
+        <SideBar />
+        <MobileNav />
+        <div className='root-container'>
+            <div className="wrapper">{children}</div>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+export default Layout
